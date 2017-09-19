@@ -1,23 +1,23 @@
 // Your code, that will be handle the processing of your skill
 // The names need to match your Alexa Intents you made in the Skill Builder
 const handlers = {
-    'PositiveMaths': function() {
-        this.emit(':tell', 'Yay! I like maths too!');
+    'Positive': function() {
+        this.emit(':tell', 'Yay! I\'m glad you like programming club!');
     },
-    'NegativeMaths': function() {
-        this.emit(':tell', 'Aww. Maths can be really useful in later life for mangaging your own money though.');
+    'Negative': function() {
+        this.emit(':tell', 'Aww. Programming can be so fun though - you can create apps like me!');
     },
 
     // LaunchRequest is special: it is called when your app is opened without an intent for example:
     // "Alexa open <skill name>"
     'LaunchRequest': function() {
-        this.emit(':ask', 'Hi there, do you like maths?');
+        this.emit(':ask', 'Hi there, do you think programming club is good or bad?');
     },
 
     // AMAZON.HelpIntent, AMAZON.CancelIntent and AMAZON.StopIntent are built in intents
     // They recognise "Help", "Cancel" and "Stop" respectively.
     'AMAZON.HelpIntent': function() {
-        this.emit(':tell', 'You can tell this skill whether you like or don\'t like maths.');
+        this.emit(':tell', 'You can tell this skill whether you like or don\'t like programming club.');
     },
     'AMAZON.CancelIntent': function() {
         // This means run the 'StopIntent' code instead, as it'll be the same
